@@ -1,0 +1,133 @@
+body{
+    font-family: Roboto, sans-serif;
+  }
+  .container{
+    margin-top: 20px;
+  }
+  .form-control{
+    position: relative;
+  }
+  #senha,
+  .form-control, 
+  #concordo-termos, 
+  #receber-emails,
+  .form-check-input,
+  #login,
+  #lembrar-senha,
+  #pets,
+  #anexar,
+  #carregar{
+    border: 1px solid #C37796;
+  }
+  #pets,#anexar,#carregar{
+    border-radius: 10px;
+  }
+  #perfil{
+    position: relative;
+    left: 38%;
+    width: 150px;
+    height: 150px;
+    border: 1px solid #C37796;
+    border-radius: 50%;
+  }
+  #search:after{
+    content:'+';
+    vertical-align: middle;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #C37796;
+    border: none;
+    transform:translate(50%,110%);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  #load:after{
+    content:'+';
+    vertical-align: middle;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #C37796;
+    border: none;
+    border-radius: 50%;
+    left:66%;
+    top: 81%;            
+    cursor: pointer;
+    z-index: 0;
+    
+  }
+  h4,h2,h3,h5{
+    text-align: center;
+    margin-top: 10px;
+  }
+  h4{
+    border-bottom: 2px solid #C37796;
+    padding-bottom: 35px;    
+  }
+  hr{
+    color: #C37796;
+    border: 2px solid #C37796;
+  }
+  #senha,
+  #login {
+    border: 1px solid #C37796;
+  }
+
+  #logar, #enviar_cadastro {
+    width: 250px;
+    height: 52px;
+    background-color: #4F6B94;
+  }
+
+  #cadastrar,
+  #host {
+    width: 400px;
+    height: 52px;
+    color: #ffffff;
+  }
+  a{
+    color: #ffffff;
+  }
+  #recovery{
+    color: #000000;
+  }
+  #cadastrar {
+    background-color: #1C3254;
+  }
+
+  #host {
+    background-color: #4F6B94;
+  }
+
+  #logo {
+    position: relative;      
+    transform:translateX(40%);
+  }
+  a{
+    text-decoration: none;      
+  }
+  .custom-file-label::after {
+    content: none; 
+}
+.custom-file-label{
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+}
+.col-md-3 input[type="file"] {
+    display: none;
+}
+#pesoPet{
+  width: 100%;
+}
+input[type="range"] {
+  /* Defina a cor do fundo */
+  background: #C37796;
+  /* Defina a cor da borda */
+  border: 2px solid #C37796;
+  /* Defina a cor do marcador (ponteiro) */
+  thumb {
+      background: #C37796;
+  }
+}
