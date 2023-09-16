@@ -14,7 +14,8 @@ $(document).ready(function() {
         console.log("Senha: " + senha);
 
         // Opcional: Exiba uma mensagem de confirmação
-        //alert("Email: " + email + "\nSenha: " + senha);
+        alert("Cadastro realizado com sucesso!");
+        window.location.href = "index.html";
     });
     $("#logar").click(function() {
         // Obtenha os valores digitados pelo usuário
