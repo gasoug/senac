@@ -101,8 +101,8 @@ body{
   }
 
   #logo {
-    position: relative;      
-    transform:translateX(40%);
+    display: block;
+    text-align: center;    
   }
   a{
     text-decoration: none;      
