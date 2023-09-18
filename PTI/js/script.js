@@ -2,16 +2,18 @@ $(document).ready(function() {
     $("#form").submit(function(event) {
         event.preventDefault(); // Impede o envio padrão do formulário
 
-        // Obtenha os valores dos campos Email e Senha
+        // Obtenha os valores dos campos Nome, Email e Senha
+        var nome = $("#nome").val();
         var email = $("#email").val();
         var senha = $("#senha").val();
 
+        localStorage.setItem("nome", nome);
         localStorage.setItem("email", email);
         localStorage.setItem("senha", senha);
 
         // Faça algo com os valores, como enviá-los ao servidor via AJAX
-        console.log("Email: " + email);
-        console.log("Senha: " + senha);
+        //console.log("Email: " + email);
+        //console.log("Senha: " + senha);
 
         // Opcional: Exiba uma mensagem de confirmação
         Swal.fire({
@@ -29,7 +31,7 @@ $(document).ready(function() {
     $("#logar").click(function() {
         // Obtenha os valores digitados pelo usuário
         var loginDigitado = $("#login1").val();
-        var senhaDigitada = $("#senha1").val();
+        var senhaDigitada = $("#senha1").val();        
 
         // Obtenha os valores do localStorage
         var loginArmazenado = localStorage.getItem("email");
@@ -46,8 +48,8 @@ $(document).ready(function() {
             });
             // Redirecione para a página de usuário após um breve intervalo
             setTimeout(function() {
-                window.location.href = "usuario.html";
-            }, 1500);
+                window.location.href = "usuario.html";                
+            }, 1500);            
         } else {
             // Exiba uma mensagem de erro (opcional)
             Swal.fire({
