@@ -14,8 +14,17 @@ $(document).ready(function() {
         console.log("Senha: " + senha);
 
         // Opcional: Exiba uma mensagem de confirmação
-        alert("Cadastro realizado com sucesso!");
-        window.location.href = "index.html";
+        Swal.fire({
+            icon: 'success',
+            title: 'Cadastro realizado com sucesso!',
+            text: 'Redirecionando...',
+            showConfirmButton: false,
+            timer: 1500 // Fechar o Swal após 1,5 segundos
+        });
+        // Redirecione para a página de usuário após um breve intervalo
+        setTimeout(function() {
+            window.location.href = "index.html";
+        }, 1500);
     });
     $("#logar").click(function() {
         // Obtenha os valores digitados pelo usuário
@@ -28,12 +37,24 @@ $(document).ready(function() {
         //console.log(loginArmazenado, senhaArmazenada)
         // Verifique se os valores coincidem
         if (loginDigitado == loginArmazenado && senhaDigitada == senhaArmazenada) {
-            // Redirecione para a página de usuário
-            alert("Logado com sucesso");
-            window.location.href = "usuario.html";
+            Swal.fire({
+                icon: 'success',
+                title: 'Login bem-sucedido!',
+                text: 'Redirecionando...',
+                showConfirmButton: false,
+                timer: 1500 // Fechar o Swal após 1,5 segundos
+            });
+            // Redirecione para a página de usuário após um breve intervalo
+            setTimeout(function() {
+                window.location.href = "usuario.html";
+            }, 1500);
         } else {
             // Exiba uma mensagem de erro (opcional)
-            alert("Login ou senha incorretos. Por favor, tente novamente.");
+            Swal.fire({
+                icon: 'error',
+                title: 'Erro',
+                text: 'Login ou senha incorretos. Por favor, tente novamente.'
+            });
             $("#login1").val('');
             $("#senha1").val('');
         }
